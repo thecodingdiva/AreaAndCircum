@@ -17,9 +17,7 @@ namespace AreaAndCircum
             double circumference = 2 * pi * radius;
             double area = pi * (radius * radius);
 
-            Console.WriteLine("Circumference = " + circumference + "/nArea = " + area);
-
-
+            Console.WriteLine("Circumference = " + circumference + "\nArea = " + area);
         }
     }
 }
