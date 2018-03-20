@@ -12,7 +12,8 @@ namespace AreaAndCircum
         {
             double pi = 3.14159;
             Console.WriteLine("Enter the radius: ");
-            double radius = Console.Read();
+            String r = Console.ReadLine();
+            double radius = Convert.ToDouble(r);
 
             double circumference = 2 * pi * radius;
             double area = pi * (radius * radius);
