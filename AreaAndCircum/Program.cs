@@ -54,6 +54,10 @@ namespace AreaAndCircum
             {
                 Console.WriteLine("Input cannot be 0");
             }
+            finally
+            {
+                Console.WriteLine("Your program has terminated");
+            }
         }
 
         static double GetRadius()
@@ -67,7 +71,7 @@ namespace AreaAndCircum
         static double CircleCircumfrence(double radius)
         {
             const double PI = 3.14159;
-            double circumference = 2 * PI * radius;
+            double circumference = checked(2 * PI * radius);
             Console.WriteLine("The Circumfrence is: " + circumference);
             return circumference;
         }
@@ -75,7 +79,7 @@ namespace AreaAndCircum
         static double CircleArea(double radius)
         {
             const double PI = 3.14159;
-            double area = PI * (radius * radius);
+            double area = checked(PI * (radius * radius));
             Console.WriteLine("The Area is: " + area);
             return area;
         }
@@ -83,7 +87,7 @@ namespace AreaAndCircum
         static double HemisphereVolume(double radius)
         {
             const double PI = 3.14159;
-            double volume = (((4 / 3) * PI * (radius * radius * radius)) / 2);
+            double volume = checked((((4 / 3) * PI * (radius * radius * radius)) / 2));
             Console.WriteLine("The Volume is: " + volume);
             return volume;
         }
